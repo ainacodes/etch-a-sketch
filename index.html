@@ -19,18 +19,38 @@
     <h1>etch-a-sketch</h1>
     <div class="big-container">
         <div class="option-container">
-            <button onclick="resetSize()" class="btn-primary btn-reset">Reset</button>
-            <div class="grid-size-container"></div>
+            <input class="input-color" type="color" id="colorpicker" value="#111111">
+            <button class="btn-primary btn-rainbow">
+                Rainbow
+            </button>
+            <button class="btn-primary btn-eraser">
+                <i class="fa-solid fa-eraser"></i>
+            </button>
+            <button class="btn-primary btn-clear">
+                Clear
+            </button>
+            <div class="reset-container">
+                <input class="reset-input" type="text" placeholder="Grid Size" value="16" onchange="resetSize(this.value)">
+                <button class="btn-primary btn-reset">
+                    Reset
+                </button>
+            </div>
         </div>
+        <div class="grid-size-container"></div>
+
         <div class="grid-container">
         </div>
     </div>
 
     <div class="footer">
-        <a href="https://github.com/ainacodes" target="_blank">
-            <i class="fa-brands fa-github"></i>
-            ainacodes
-        </a>
+        <p><script>document.write(new Date().getFullYear())</script>
+             &copy
+            <a href="https://github.com/ainacodes" target="_blank">
+
+                ainacodes
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </p>
     </div>
 
     <script src="script.js"></script>
